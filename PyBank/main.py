@@ -4,7 +4,7 @@ import csv
 # Path to collect data from the Resources folder
 PyBank_csv = os.path.join('', 'Resources', 'budget_data.csv')
 
-#variables
+#variables and lists
 Sum =0
 diff=0
 Profit_Loss2 =[]
