@@ -38,7 +38,7 @@ with open(PyPoll_csv, encoding ='utf-8') as csvfile:
     #Calculate the % votes for each candidate 
     highest_count =Total_votes[0]       
     for i in range(len(Candidates)):
-        percent_votes = round((Total_votes[i]/len(Total_voters))*100, 1)
+        percent_votes = round((Total_votes[i]/len(Total_voters))*100, 3)
         candidate_percent.append(percent_votes)
     #Calculate the Winner
         if Total_votes[i] > highest_count:
@@ -48,12 +48,28 @@ with open(PyPoll_csv, encoding ='utf-8') as csvfile:
    
     print("Election Results")
     print("-------------------------")
-    print(f'Total Voters: {len(Total_voters)}')    
+    print(f'Total Votes: {len(Total_voters)}')    
     print("-------------------------")
     for i in range(len(Candidates)):
         print(f'{Candidates[i]}: {candidate_percent[i]}% ({Total_votes[i]})')
     print("-------------------------")
     print(f'Winner:{Candidates[highest_index]}')
    
- 
+# Set variable for output file
+output_file = os.path.join("PyPoll_final.csv")
+
+#  Open the output file
+with open(output_file, "w") as datafile:
+    writer = csv.writer(datafile)
+
+    # Write the rows
+    writer.writerow(['Election Results'])
+    writer.writerow(['-----------------------'])
+    writer.writerow([f'Total Votes: {len(Total_voters)}'])
+    writer.writerow(['-----------------------'])
+    writer.writerow([f' {Candidates}'])
+    writer.writerow([f':{candidate_percent}'])
+    writer.writerow([f':{Total_votes}'])
+    writer.writerow(['-------------------------'])
+    writer.writerow([f'Winner: {Candidates[highest_index]}']) 
            
