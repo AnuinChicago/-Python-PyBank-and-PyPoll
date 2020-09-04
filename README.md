@@ -1,6 +1,8 @@
 
 ## Project1 PyBank
 
+![bank](Pybank.png)
+
 The task is to create a Python script for analyzing the financial records of a company. the dataset given is a financial data called budget_data.csv. The dataset is composed of two columns: Date and Profit/Losses.
 
 The task is to create a Python script that analyzes the records to calculate each of the following:
@@ -18,6 +20,8 @@ The greatest decrease in losses (date and amount) over the entire period
 
 
 ## Project2 PyPoll
+
+![bank](Pypoll.png)
 
 In this project task is to help a small, rural town modernize its vote-counting process with the help of a python script. The dataset given is of poll data called election_data.csv. The dataset is composed of three columns: Voter ID, County, and Candidate. The task is to create a Python script that analyzes the votes and calculates each of the following:
 
